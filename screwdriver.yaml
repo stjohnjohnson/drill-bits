@@ -2,8 +2,4 @@ jobs:
   main:
     image: node:6
     steps:
-      - test: |
-          mkdir ~/.ssh
-          touch ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh git@github.com hostname
+      - test: ssh git@github.com hostname
