@@ -2,6 +2,6 @@ jobs:
   main:
     image: node:6
     steps:
-      test: |
-        touch ~/.ssh/id_rsa
-        ssh git@github.com hostname
+      - test: |
+          touch ~/.ssh/id_rsa
+          ssh git@github.com hostname
