@@ -1,5 +1,0 @@
-jobs:
-  main:
-    image: node:6
-    steps:
-      - test: ssh git@github.com hostname
