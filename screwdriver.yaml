@@ -1,0 +1,21 @@
+jobs:
+      main:
+            image: node:6
+            requires: [~pr, ~commit]
+            steps:
+                - echo: echo hi
+      A:
+            image: node:6
+            requires: [main]
+            steps:
+                - echo: echo parallel
+      B:
+            image: node:6
+            requires: [main]
+            steps:
+                - echo: echo parallel
+      C:
+            image: node:6
+            requires: [A, B]
+            steps:
+                - echo: echo bye
