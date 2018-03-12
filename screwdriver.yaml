@@ -1,3 +1,6 @@
+annotations:
+      beta.screwdriver.cd/restrict-pr: all
+
 jobs:
       main:
             image: node:6
