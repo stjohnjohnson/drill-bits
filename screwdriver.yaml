@@ -8,17 +8,17 @@ jobs:
             steps:
                 - echo: echo hi
       A:
-            image: node:6
+            image: alpine:3.6
             requires: [main]
             steps:
                 - echo: echo parallel
       B:
-            image: node:6
+            image: alpine:3.7
             requires: [main]
             steps:
                 - echo: echo parallel
       C:
-            image: node:6
+            image: alpine:edge
             requires: [A, B]
             steps:
                 - echo: echo bye
