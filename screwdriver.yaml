@@ -3,12 +3,12 @@ annotations:
 
 jobs:
       main:
-            image: node:6
+            image: alpine:3.6
             requires: [~pr, ~commit]
             steps:
                 - echo: echo hi
       A:
-            image: alpine:3.6
+            image: node:8
             requires: [main]
             steps:
                 - echo: echo parallel
